@@ -8,6 +8,12 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear" ng-click="login()"ng-if='!user.username'>Login
+        </button>
+        <button class="button button-icon button-clear" ng-if='user.username'>{{user.username}}</button>
+      </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
