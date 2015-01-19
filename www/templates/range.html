@@ -1,37 +1,40 @@
-<style>
-.range-rotate{
-  -ms-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg);
-}
-
-</style>
-
 <ion-view view-title="Range">
-  <ion-content>
-    <div class="range-rotate">
-      <div class="row">
-        <div class="range col-50 col-offset-20">
-          <input type="range" name="volume" min="-3" max="3" value="-3">
+    <ion-content>
+        <div class="row row-center" style="padding-top:60px">
+            <div class="col col-10">
+                <span class="text-center">
+                    <a class="ion-chevron-left button-clear button-dark"></a>
+                </span>
+            </div>
+            <div class="col col-80">
+                <div class="range-rotate_270">
+                    <div class="range row sp-row">
+                        <span class="col badge badge-stable">-3</span>
+                        <span class="col badge badge-stable">-2</span>
+                        <span class="col badge badge-stable">-1</span>
+                        <span class="col badge badge-stable">0</span>
+                        <span class="col badge badge-stable">1</span>
+                        <span class="col badge badge-stable">2</span>
+                        <span class="col badge badge-stable">3</span>
+                    </div>
+                    <div class="range sp-range">
+                        <input type="range" name="volume" min="-3" max="3" value="-1">
+                    </div>
+                    <div class="range sp-range">
+                        <input type="range" name="volume" min="-3" max="3" value="1">
+                    </div>
+                    <div class="range sp-range">
+                        <input type="range" name="volume" min="-3" max="3" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="col col-10">
+                <span class="text-center">
+                    <a class="ion-chevron-right button-clear button-dark"></a>
+                </span>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="range col-50 col-offset-20">
-            <input type="range" name="volume" min="-3" max="3" value="-1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="range col-50 col-offset-20">
-            <input type="range" name="volume" min="-3" max="3" value="1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="range col-50 col-offset-20">
-          <input type="range" name="volume" min="-3" max="3" value="0">
-        </div>
-      </div>
-    </div>
 
-  </ion-content>
+    </ion-content>
 </ion-view>
       

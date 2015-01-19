@@ -1,0 +1,104 @@
+@mixin roate-270{
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+@mixin roate-90{
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-muted {
+  color: #777;
+}
+.text-primary {
+  color: #428bca;
+}
+a.text-primary:hover {
+  color: #3071a9;
+}
+.text-success {
+  color: #3c763d;
+}
+a.text-success:hover {
+  color: #2b542c;
+}
+.text-info {
+  color: #31708f;
+}
+a.text-info:hover {
+  color: #245269;
+}
+.text-warning {
+  color: #8a6d3b;
+}
+a.text-warning:hover {
+  color: #66512c;
+}
+.text-danger {
+  color: #a94442;
+}
+a.text-danger:hover {
+  color: #843534;
+}
+.range-rotate_270{
+  @include roate-270;
+}
+.range-number_90{
+  @include roate-90;
+}
+.sp-range input{
+  margin:0;
+}
+.range-no-line{
+  input[type="range"]{
+    margin:0;
+    background:none;
+  }
+}
+.sp-row span{
+  text-align:center;
+  @include roate-90;
+}
+.col{
+  .range-rotate_270{
+    .range{
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+  }
+}
+.col-5 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 5%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 5%;
+  -ms-flex: 0 0 5%;
+  flex: 0 0 5%;
+  max-width: 5%;
+}
