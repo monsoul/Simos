@@ -1,8 +1,8 @@
 <ion-view view-title="Circle">
     <ion-content id="myCircle">
         <div class="row row-center">
-            <div class="col" circle-Body>
-                <div id="canvas"></div>
+            <div class="col" circle-Body ng-model='number'>
+                <div id="canvas">{{number}}</div>
                 <div id="drag"></div>
             </div>
         </div>

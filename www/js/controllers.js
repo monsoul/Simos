@@ -175,9 +175,8 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
         }
     }
 
-    $scope.$watch('myRange',function(oldValue,newValue){
+    $scope.number=0;
 
-    })
 
 })
 

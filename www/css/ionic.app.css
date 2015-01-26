@@ -7267,9 +7267,7 @@ a.text-danger:hover {
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
   border-radius: 300px;
-  border: dashed #ccc 1px;
-  top: 85px;
-  left: 20px; }
+  border: dashed #ccc 1px; }
 
 #drag {
   position: absolute;
@@ -7278,5 +7276,4 @@ a.text-danger:hover {
   height: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px;
-  top: 190px; }
+  border-radius: 20px; }

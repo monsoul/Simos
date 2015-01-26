@@ -78,56 +78,52 @@
         }
     ]);
 
-    directive.directive('inputRange3', ['$compile', 
-        function($compile) {
-            return function(scope, element, attr) {
-                var cust = document.querySelector('#js-vertical3');
-                var initCust = new Powerange(cust, {
-                    hideRange: true,
-                    klass: 'power-ranger',
-                    start: 0,
-                    max:3,
-                    min:-3,
-                    step:1,
-                    vertical: true
-                });
-            }
-        }
-    ]);
-
     directive.directive('circleBody', ['$compile',
         function($compile) {
             return function(scope, element, attr) {
 
                 jQuery(function($) {
 
-                    var cirecleLeft = ($('#myCircle')[0].offsetWidth - 300) / 2;
-                    var cirecleTop = ($('#myCircle')[0].offsetHeight - 300) / 2;
+                    var cirecleLeft = ($('#myCircle')[0].offsetWidth - $('#canvas').width()) / 2;
+                    var cirecleTop = ($('#myCircle')[0].offsetHeight - $('#canvas').width()) / 2;
 
                     $('#canvas').css({
                         top: cirecleTop,
                         left: cirecleLeft
                     });
                     $('#drag').css({
-                        top: cirecleTop - 10,
-                        left: cirecleLeft - 10 + 150
+                        top: cirecleTop - $('#drag').width() / 2,
+                        left: cirecleLeft - $('#drag').width() / 2 + $('#canvas').width() / 2
                     });
-                    $('#drag').drag('start', function(ev, dd) {
-                        if (!$.data(this, 'circle')) {
-                            $.data(this, 'circle', {
-                                radius: 150,
-                                centerX: cirecleLeft + 150 - 10,
-                                centerY: cirecleTop + 150 - 10
-                            });
+
+                    var drag = $('#drag');
+                    drag.draggable({
+                        start: function(e) {
+                            if (!drag.data('circle'))
+                                drag.data('circle', {
+                                    radius: $('#canvas').width() / 2,
+                                    centerX: cirecleLeft + $('#canvas').width() / 2 - $('#drag').width() / 2,
+                                    centerY: cirecleTop + $('#canvas').width() / 2 - $('#drag').width() / 2
+                                });
+                        },
+                        drag: function(e, ui) {
+                            var data = drag.data('circle');
+                            var angle = Math.atan2(e.pageX - data.centerX, e.pageY - data.centerY);
+                            var postop = Math.ceil((data.centerY + (Math.cos(angle) * data.radius)));
+                            var posleft = Math.ceil((data.centerX + (Math.sin(angle) * data.radius)))
+                            ui.position.top = postop;
+                            ui.position.left = posleft;
+
+                            var x = (posleft  - (cirecleLeft + $('#canvas').width() / 2 - $('#drag').width() / 2)) / 150;
+                            var y = (postop  - (cirecleTop + $('#canvas').width() / 2 - $('#drag').width() / 2)) / 150;
+
+                            var cos = (180-Math.atan2(x, y) * 180 / Math.PI)/360*24 //;
+                            scope.number=cos;
+                            scope.$apply();
+
+
+
                         }
-                    })
-                    $('#drag').drag(function(ev, dd) {
-                        var data = $.data(this, 'circle'),
-                            angle = Math.atan2(ev.pageX - data.centerX, ev.pageY - data.centerY);
-                        $(this).css({
-                            top: data.centerY + Math.cos(angle) * data.radius,
-                            left: data.centerX + Math.sin(angle) * data.radius
-                        });
                     });
                 });
             }
