@@ -17,39 +17,18 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
     };
 
     $scope.openPopover = function($event) {
-        console.log($event);
-        $event.clientY=100;
-        $event.clientX=100;
-
         $scope.popover.show($event);
     };
 
-    
-
-    $scope.showPopup = function() {
+    $scope.showPopup = function(number) {
         console.log('test');
         $scope.data = {}
 
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
-            template: '<input type="password" ng-model="data.wifi">',
-            title: 'Enter Wi-Fi Password',
-            subTitle: 'Please use normal things',
-            scope: $scope,
-            buttons: [{
-                text: 'Cancel'
-            }, {
-                text: '<b>Save</b>',
-                type: 'button-positive',
-                onTap: function(e) {
-                    if (!$scope.data.wifi) {
-                        //don't allow the user to close unless he enters wifi password
-                        e.preventDefault();
-                    } else {
-                        return $scope.data.wifi;
-                    }
-                }
-            }]
+            template: '<h1>hello</h1><h2>world</h2>',
+            title: number,
+            scope: $scope
         });
         myPopup.then(function(res) {
             console.log('Tapped!', res);
@@ -176,6 +155,7 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
     }
 
     $scope.number=0;
+    $scope.numberInfo="hello";
 
 
 })

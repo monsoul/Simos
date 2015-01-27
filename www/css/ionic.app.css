@@ -7260,20 +7260,31 @@ a.text-danger:hover {
   height: 290px; }
 
 #canvas {
-  background: #eee;
+  background: #fff;
   position: absolute;
   height: 300px;
   width: 300px;
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
   border-radius: 300px;
-  border: dashed #ccc 1px; }
+  border: 3px solid #000; }
 
 #drag {
   position: absolute;
   background: #000;
-  width: 20px;
-  height: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px; }
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px; }
+
+#dragInfo {
+  background: #000;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  border: 3px solid #DE7422;
+  color: #ffffff; }

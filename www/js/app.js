@@ -38,9 +38,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCookies', 'Simos.s
         $stateProvider
 
         .state('app', {
-            url: "/app",
+            url: '/app',
             abstract: true,
-            templateUrl: "templates/menu.html",
+            templateUrl: 'templates/menu.html',
             controller: 'AppCtrl'
         })
 
@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCookies', 'Simos.s
             url: '/manual',
             views: {
                 'menuContent': {
-                    templateUrl: "templates/manual.html"
+                    templateUrl: 'templates/manual.html'
                 }
             }
         })
@@ -60,52 +60,50 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCookies', 'Simos.s
                     }
                 }
             })
-
-        .state('app.circle', {
-            url: '/circle',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/circle.html'
+            .state('app.circle', {
+                url: '/circle',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/circle.html'
+                    }
                 }
-            }
-        })
+            })
 
         .state('app.search', {
-            url: "/search",
+            url: '/search',
             views: {
                 'menuContent': {
-                    templateUrl: "templates/search.html"
+                    templateUrl: 'templates/search.html'
                 }
             }
         })
 
         .state('app.browse', {
-            url: "/browse",
+            url: '/browse',
             views: {
                 'menuContent': {
-                    templateUrl: "templates/browse.html"
+                    templateUrl: 'templates/browse.html'
                 }
             }
         })
             .state('app.playlists', {
-                url: "/playlists",
+                url: '/playlists',
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/playlists.html",
+                        templateUrl: 'templates/playlists.html',
                         controller: 'PlaylistsCtrl'
                     }
                 }
             })
-
-        .state('app.single', {
-            url: "/playlists/:playlistId",
-            views: {
-                'menuContent': {
-                    templateUrl: "templates/playlist.html",
-                    controller: 'PlaylistCtrl'
+            .state('app.single', {
+                url: '/playlists/:playlistId',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/playlist.html',
+                        controller: 'PlaylistCtrl'
+                    }
                 }
-            }
-        });
+            });
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/app/manual');
     });

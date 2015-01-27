@@ -2,33 +2,7 @@
     'use strict';
     var directive = angular.module('Simos.directive', []);
 
-
-    directive.directive('addFunction', ['$compile',
-        function($compile) {
-            return function(scope, element, attr) {
-
-                console.log('directive');
-            }
-        }
-    ]);
-
-    directive.directive('testRange',[])
-    directive.directive('testRange', ['$compile', 
-        function($compile) {
-            return function(scope, element, attr) {
-                var cust = document.querySelector('#js-test');
-                var initCust = new Powerange(cust, {
-                    hideRange: true,
-                    start: 0,
-                    max:3,
-                    min:-3,
-                    step:1
-                });
-            }
-        }
-    ]);
-
-    directive.directive('inputRange1', ['$compile', 
+    directive.directive('inputRange1', ['$compile',
         function($compile) {
             return function(scope, element, attr) {
                 var cust = document.querySelector('#js-vertical1');
@@ -36,16 +10,16 @@
                     hideRange: true,
                     klass: 'power-ranger',
                     start: 0,
-                    max:3,
-                    min:-3,
-                    step:1,
+                    max: 3,
+                    min: -3,
+                    step: 1,
                     vertical: true
                 });
             }
         }
     ]);
-    
-    directive.directive('inputRange2', ['$compile', 
+
+    directive.directive('inputRange2', ['$compile',
         function($compile) {
             return function(scope, element, attr) {
                 var cust = document.querySelector('#js-vertical2');
@@ -53,15 +27,15 @@
                     hideRange: true,
                     klass: 'power-ranger',
                     start: 0,
-                    max:3,
-                    min:-3,
-                    step:1,
+                    max: 3,
+                    min: -3,
+                    step: 1,
                     vertical: true
                 });
             }
         }
     ]);
-    directive.directive('inputRange3', ['$compile', 
+    directive.directive('inputRange3', ['$compile',
         function($compile) {
             return function(scope, element, attr) {
                 var cust = document.querySelector('#js-vertical3');
@@ -69,9 +43,9 @@
                     hideRange: true,
                     klass: 'power-ranger',
                     start: 0,
-                    max:3,
-                    min:-3,
-                    step:1,
+                    max: 3,
+                    min: -3,
+                    step: 1,
                     vertical: true
                 });
             }
@@ -82,18 +56,35 @@
         function($compile) {
             return function(scope, element, attr) {
 
-                jQuery(function($) {
+                $(function() {
+                    var myCircleCss = {
+                        width: $('#myCircle')[0].offsetWidth,
+                        height: $('#myCircle')[0].offsetHeight
+                    };
+                    var canvasCss = {
+                        width: $('#canvas').width()
+                    };
+                    var dragCss = {
+                        width: $('#drag').width()
+                    };
+                    var dragInfoCss = {
+                        width: $('#dragInfo').width()
+                    };
 
-                    var cirecleLeft = ($('#myCircle')[0].offsetWidth - $('#canvas').width()) / 2;
-                    var cirecleTop = ($('#myCircle')[0].offsetHeight - $('#canvas').width()) / 2;
+                    var cirecleLeft = (myCircleCss.width - canvasCss.width) / 2;
+                    var cirecleTop = (myCircleCss.height - canvasCss.width) / 2;
 
                     $('#canvas').css({
                         top: cirecleTop,
                         left: cirecleLeft
                     });
                     $('#drag').css({
-                        top: cirecleTop - $('#drag').width() / 2,
-                        left: cirecleLeft - $('#drag').width() / 2 + $('#canvas').width() / 2
+                        top: cirecleTop - dragCss.width / 2,
+                        left: cirecleLeft - dragCss.width / 2 + canvasCss.width / 2
+                    });
+                    $('#dragInfo').css({
+                        top: cirecleTop + (canvasCss.width - dragInfoCss.width) / 2,
+                        left: cirecleLeft + (canvasCss.width - dragInfoCss.width) / 2
                     });
 
                     var drag = $('#drag');
@@ -101,9 +92,9 @@
                         start: function(e) {
                             if (!drag.data('circle'))
                                 drag.data('circle', {
-                                    radius: $('#canvas').width() / 2,
-                                    centerX: cirecleLeft + $('#canvas').width() / 2 - $('#drag').width() / 2,
-                                    centerY: cirecleTop + $('#canvas').width() / 2 - $('#drag').width() / 2
+                                    radius: canvasCss.width / 2,
+                                    centerX: cirecleLeft + canvasCss.width / 2 - dragCss.width / 2,
+                                    centerY: cirecleTop + canvasCss.width / 2 - dragCss.width / 2
                                 });
                         },
                         drag: function(e, ui) {
@@ -114,18 +105,15 @@
                             ui.position.top = postop;
                             ui.position.left = posleft;
 
-                            var x = (posleft  - (cirecleLeft + $('#canvas').width() / 2 - $('#drag').width() / 2)) / 150;
-                            var y = (postop  - (cirecleTop + $('#canvas').width() / 2 - $('#drag').width() / 2)) / 150;
+                            var x = (posleft - (cirecleLeft + canvasCss.width / 2 - dragCss.width / 2)) / 150;
+                            var y = (postop - (cirecleTop + canvasCss.width / 2 - dragCss.width / 2)) / 150;
 
-                            var cos = (180-Math.atan2(x, y) * 180 / Math.PI)/360*24 //;
-                            scope.number=cos;
+                            var cos = (180 - Math.atan2(x, y) * 180 / Math.PI) / 360 * 24 //;
+                            scope.number = cos.toFixed(0);
                             scope.$apply();
-
-
-
                         }
                     });
-                });
+                })
             }
         }
     ]);

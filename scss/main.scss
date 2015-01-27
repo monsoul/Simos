@@ -1,323 +1,307 @@
-@mixin roate-270{
-  -ms-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg);
+@mixin roate-270 {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
-@mixin roate-90{
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+@mixin roate-90 {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
+$color_white : #ffffff;
 .text-left {
-  text-align: left;
+    text-align: left;
 }
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 .text-justify {
-  text-align: justify;
+    text-align: justify;
 }
 .text-nowrap {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 .text-lowercase {
-  text-transform: lowercase;
+    text-transform: lowercase;
 }
 .text-uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 .text-capitalize {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+    color: #777;
 }
 .text-primary {
-  color: #428bca;
+    color: #428bca;
 }
 a.text-primary:hover {
-  color: #3071a9;
+    color: #3071a9;
 }
 .text-success {
-  color: #3c763d;
+    color: #3c763d;
 }
 a.text-success:hover {
-  color: #2b542c;
+    color: #2b542c;
 }
 .text-info {
-  color: #31708f;
+    color: #31708f;
 }
 a.text-info:hover {
-  color: #245269;
+    color: #245269;
 }
 .text-warning {
-  color: #8a6d3b;
+    color: #8a6d3b;
 }
 a.text-warning:hover {
-  color: #66512c;
+    color: #66512c;
 }
 .text-danger {
-  color: #a94442;
+    color: #a94442;
 }
 a.text-danger:hover {
-  color: #843534;
+    color: #843534;
 }
-.range-rotate_270{
-  @include roate-270;
+.range-rotate_270 {
+    @include roate-270;
 }
-.range-number_90{
-  @include roate-90;
+.range-number_90 {
+    @include roate-90;
 }
-.sp-range{
-  input{
-    margin:0;
-  }
-}
-.range-no-line{
-  input[type="range"]{
-    margin:0;
-    background:none;
-  }
-}
-.sp-row span{
-  text-align:center;
-  @include roate-90;
-}
-.col{
-  .range-rotate_270{
-    .range{
-      padding-top:10px;
-      padding-bottom:10px;
+.sp-range {
+    input {
+        margin: 0;
     }
-  }
+}
+.range-no-line {
+    input[type="range"] {
+        margin: 0;
+        background: none;
+    }
+}
+.sp-row span {
+    text-align: center;
+    @include roate-90;
+}
+.col {
+    .range-rotate_270 {
+        .range {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
 }
 .col-5 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 5%;
-  -moz-box-flex: 0;
-  -moz-flex: 0 0 5%;
-  -ms-flex: 0 0 5%;
-  flex: 0 0 5%;
-  max-width: 5%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 5%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 5%;
+    -ms-flex: 0 0 5%;
+    flex: 0 0 5%;
+    max-width: 5%;
 }
-
 .slider-wrapper {
-  margin: 50px 0 30px 30px;
-  position: relative;
-  width: 250px;
+    margin: 50px 0 30px 30px;
+    position: relative;
+    width: 250px;
 }
-
 .vertical-wrapper {
-  height: 200px;
-  width: auto;
+    height: 200px;
+    width: auto;
 }
-
-.range-min,
-.range-max {
-  padding-top: 1px !important;
+.range-min, .range-max {
+    padding-top: 1px !important;
 }
-
 .range-bar.power-ranger {
-  background-color: #6b6b6b;
+    background-color: #6b6b6b;
 }
-
 .power-ranger .range-quantity {
-  background-color: #e52027;
+    background-color: #e52027;
 }
-
-.brain-wrapper{
-  .power-ranger{
-    .range-handle{
-      background: url('../img/brain.png') 0 0 no-repeat;
-      border-radius: 0;
-      width: 40px;
-      height:40px;
-      -webkitbox-shadow: none;
-      box-shadow: none;
+.brain-wrapper {
+    .power-ranger {
+        .range-handle {
+            background: url('../img/brain.png') 0 0 no-repeat;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            -webkitbox-shadow: none;
+            box-shadow: none;
+        }
+        .range-handle:hover {
+            background: url('../img/brain-active.png') 0 0 no-repeat;
+        }
     }
-    .range-handle:hover{
-      background: url('../img/brain-active.png') 0 0 no-repeat;
-
-    }
-  }
 }
-.heart-wrapper{
-  .power-ranger{
-    .range-handle{
-      background: url('../img/heart.png') 0 0 no-repeat;
-      border-radius: 0;
-      width: 40px;
-      height:40px;
-      -webkitbox-shadow: none;
-      box-shadow: none;
+.heart-wrapper {
+    .power-ranger {
+        .range-handle {
+            background: url('../img/heart.png') 0 0 no-repeat;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            -webkitbox-shadow: none;
+            box-shadow: none;
+        }
+        .range-handle:hover {
+            background: url('../img/heart-active.png') 0 0 no-repeat;
+        }
     }
-    .range-handle:hover{
-      background: url('../img/heart-active.png') 0 0 no-repeat;
-    }
-  }
 }
-.face-wrapper{
-  .power-ranger{
-    .range-handle{
-      background: url('../img/face.png') 0 0 no-repeat;
-      border-radius: 0;
-      width: 40px;
-      height:40px;
-      -webkitbox-shadow: none;
-      box-shadow: none;
+.face-wrapper {
+    .power-ranger {
+        .range-handle {
+            background: url('../img/face.png') 0 0 no-repeat;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            -webkitbox-shadow: none;
+            box-shadow: none;
+        }
+        .range-handle:hover {
+            background: url('../img/face-active.png') 0 0 no-repeat;
+        }
     }
-    .range-handle:hover{
-      background: url('../img/face-active.png') 0 0 no-repeat;
-    }
-  }
 }
-
-
 /**
  *
  * Main stylesheet for Powerange.
  * http://abpetkov.github.io/powerange/
  *
  */
-
 /**
  * Horizontal slider style (default).
  */
 
 .range-bar {
-  background-color: #a9acb1;
-  border-radius: 15px;
-  display: block;
-  height: 4px;
-  position: relative;
-  width: 100%;
+    background-color: #a9acb1;
+    border-radius: 15px;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 100%;
 }
-
 .range-quantity {
-  background-color: #017afd;
-  border-radius: 15px;
-  display: block;
-  height: 100%;
-  width: 0;
+    background-color: #017afd;
+    border-radius: 15px;
+    display: block;
+    height: 100%;
+    width: 0;
 }
-
 .range-handle {
-  background-color: #fff;
-  border-radius: 100%;
-  cursor: move;
-  height: 30px;
-  left: 0;
-  top: -13px;
-  position: absolute;
-  width: 30px;
-
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    border-radius: 100%;
+    cursor: move;
+    height: 30px;
+    left: 0;
+    top: -13px;
+    position: absolute;
+    width: 30px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
-
-.range-min,
-.range-max {
-  color: #181819;
-  font-size: 12px;
-  height: 20px;
-  padding-top: 4px;
-  position: absolute;
-  text-align: center;
-  top: -9px;
-  width: 24px;
+.range-min, .range-max {
+    color: #181819;
+    font-size: 12px;
+    height: 20px;
+    padding-top: 4px;
+    position: absolute;
+    text-align: center;
+    top: -9px;
+    width: 24px;
 }
-
 .range-min {
-  left: -30px;
+    left: -30px;
 }
-
 .range-max {
-  right: -30px;
+    right: -30px;
 }
-
 /**
  * Vertical slider style.
  */
 
 .vertical {
-  height: 100%;
-  width: 8px;
+    height: 100%;
+    width: 8px;
 }
-
 .vertical .range-quantity {
-  bottom: 0;
-  height: 0;
-  position: absolute;
-  width: 100%;
+    bottom: 0;
+    height: 0;
+    position: absolute;
+    width: 100%;
 }
-
 .vertical .range-handle {
-  bottom: 0;
-  left: -16px;
-  top: auto;
+    bottom: 0;
+    left: -16px;
+    top: auto;
 }
-
-.vertical .range-min,
-.vertical .range-max {
-  left: -10px;
-  right: auto;
-  top: auto;
+.vertical .range-min, .vertical .range-max {
+    left: -10px;
+    right: auto;
+    top: auto;
 }
-
 .vertical .range-min {
-  bottom: -30px;
+    bottom: -30px;
 }
-
 .vertical .range-max {
-  top: -30px;
+    top: -30px;
 }
-
 /**
  * Style for disabling text selection on handle move.
  */
 
 .unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
 /**
  * Style for handle cursor on disabled slider.
  */
 
 .range-disabled {
-  cursor: default;
+    cursor: default;
 }
-.vertical-wrapper{
-  width:50px;
-  margin:0px;
-  height:290px;
+.vertical-wrapper {
+    width: 50px;
+    margin: 0px;
+    height: 290px;
 }
 #canvas {
-  background: #eee;
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  -webkit-border-radius: 300px;
-  -moz-border-radius: 300px;
-  border-radius: 300px;
-  border: dashed #ccc 1px;
+    background: #fff;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    border-radius: 300px;
+    border: 3px solid #000;
 }
-
 #drag {
-  position: absolute;
-  background: #000;
-  width: 20px;
-  height: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-}    
+    position: absolute;
+    background: #000;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+#dragInfo {
+    background: #000;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    border: 3px solid #DE7422;
+    color: $color_white;
+}
