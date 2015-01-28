@@ -1,0 +1,51 @@
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #000;
+    border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background: #65001c;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -15px;
+}
+.brain-wrapper {
+    input[type=range]::-webkit-slider-thumb {
+        @include roate-90;
+        background: url('../img/brain.png') 0 0 no-repeat;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+        @include roate-90;
+        background: url('../img/brain-active.png') 0 0 no-repeat;
+    }
+}
+.heart-wrapper {
+    input[type=range]::-webkit-slider-thumb {
+        @include roate-90;
+        background: url('../img/heart.png') 0 0 no-repeat;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+        @include roate-90;
+        background: url('../img/heart-active.png') 0 0 no-repeat;
+    }
+}
+.face-wrapper {
+    input[type=range]::-webkit-slider-thumb {
+        @include roate-90;
+        background: url('../img/face.png') 0 0 no-repeat;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+        @include roate-90;
+        background: url('../img/face-active.png') 0 0 no-repeat;
+    }
+}

@@ -18,7 +18,64 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
+// // Include all of Ionic
+// @import "www/lib/ionic/scss/ionic";
+// @charset "UTF-8";
+
+@import
+  "www/lib/ionic/scss/ionicons/ionicons.scss",
+
+  "www/lib/ionic/scss/mixins",
+  "www/lib/ionic/scss/variables",
+
+
+  "www/lib/ionic/scss/reset",
+  "www/lib/ionic/scss/scaffolding",
+  "www/lib/ionic/scss/type",
+
+  "www/lib/ionic/scss/action-sheet",
+  "www/lib/ionic/scss/backdrop",
+  "www/lib/ionic/scss/bar",
+  "www/lib/ionic/scss/tabs",
+  "www/lib/ionic/scss/menu",
+  "www/lib/ionic/scss/modal",
+  "www/lib/ionic/scss/popover",
+  "www/lib/ionic/scss/popup",
+  "www/lib/ionic/scss/loading",
+  "www/lib/ionic/scss/items",
+  "www/lib/ionic/scss/list",
+  "www/lib/ionic/scss/badge",
+  "www/lib/ionic/scss/slide-box",
+
+  "www/lib/ionic/scss/form",
+  "www/lib/ionic/scss/checkbox",
+  "www/lib/ionic/scss/toggle",
+  "www/lib/ionic/scss/radio",
+  "www/lib/ionic/scss/select",
+  "www/lib/ionic/scss/progress",
+
+  "www/lib/ionic/scss/button",
+  "www/lib/ionic/scss/button-bar",
+
+  "www/lib/ionic/scss/grid",
+  "www/lib/ionic/scss/util",
+  "www/lib/ionic/scss/platform",
+
+  "www/lib/ionic/scss/animations",
+  "www/lib/ionic/scss/transitions";
+
+@mixin roate-270 {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+@mixin roate-90 {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
 @import "main.scss";
+@import "range.scss";
 
