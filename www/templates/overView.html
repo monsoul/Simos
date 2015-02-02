@@ -3,9 +3,115 @@
         <h2 class="title">Training Mode</h2>
     </div>
     <ion-content class="has-subheader">
-        <div class="row" ng-repeat='playerlist in playerlists'>
-            <div ng-repeat="play in playerlist.row">
-                <img src="img/ionic.png" width="100%" height="100%" ng-click=''>
+        <div class="row row-center">
+            <div class="col col-10">
+                <span class="text-center">
+                    <i class="ion-chevron-left button-clear button-dark" ng-click='previousSlide()' ng-disabled='previousDisabled'></i>
+                </span>
             </div>
+
+            <div class="col">
+                <ion-slide-box>
+
+                    <ion-slide ng-repeat='playerlist in playerlists'>
+                        <div class="row" ng-repeat='rows in playerlist.rows'>
+
+                            <div class="col-33" ng-repeat='row in rows.row'>
+                                <img src="img/avatar.jpg" width="100%" />
+                            </div>
+                        </div>
+
+                    </ion-slide>
+
+<!--                     <ion-slide>
+                        <img src="http://placehold.it/300x300" alt="" />1
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="http://placehold.it/300x300" alt="" />2
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="http://placehold.it/300x300" alt="" />3
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="http://placehold.it/300x300" alt="" />4
+                    </ion-slide> -->
+
+
+                </ion-slide-box>
+            </div>
+
+            <div class="col col-10">
+                <span class="text-center">
+                    <i class="ion-chevron-right button-clear button-dark" ng-click='nextSlide()' ng-disabled='nextDisabled'></i>
+                </span>
+            </div>
+
+        </div>
+
+
+
+        
+
+
+
+<!--         <div class="row row-center" ng-repeat='player in playerlists'>
+            <div class="col col-10">
+                <span class="text-center">
+                <i class="ion-chevron-left button-clear button-dark"></i>
+                </span>
+            </div>
+
+            <div class="col col-80">
+                {{player.pageID}}
+                 <ion-slide-box active-slide="myActiveSlide">
+                    <ion-slide>
+                        <div class="box blue">
+                            <h1>BLUE</h1>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box yellow">
+                            <h1>YELLOW</h1>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box pink">
+                            <h1>PINK</h1>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+
+
+                <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                    <ion-slide>
+                        <div class="box blue">
+                            <h1>BLUE</h1>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box yellow">
+                            <h1>YELLOW</h1>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box pink">
+                            <h1>PINK</h1>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>                 <ion-slide-box>
+                    <ion-slide>1</ion-slide>
+                    <ion-slide>2</ion-slide>
+                </ion-slide-box>
+            </div>
+ -->
+<!--             <div class="col" ng-repeat="play in playerlist.row">
+                <img src="img/ionic.png" width="100%" height="100%" ng-click=''>
+            </div> -->
+            <!--<div class="col col-10" ng-click='myActiveSlide=3'>
+                <span class="text-center">
+                    <i class="ion-chevron-right button-clear button-dark"></i>
+                </span>
+            </div> -->
     </ion-content>
 </ion-view>

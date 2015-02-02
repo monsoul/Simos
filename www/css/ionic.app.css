@@ -6989,6 +6989,15 @@ a.text-danger:hover {
   flex: 0 0 5%;
   max-width: 5%; }
 
+.col-33 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 33%;
+  -ms-flex: 0 0 33%;
+  flex: 0 0 33%;
+  max-width: 33%; }
+
 .slider-wrapper {
   margin: 50px 0 30px 30px;
   position: relative;

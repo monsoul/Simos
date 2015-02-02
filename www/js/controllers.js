@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['Simos.directive', 'ionic'])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $http, $cookieStore, $rootScope, $ionicPopover, $ionicPopup, $timeout, $state) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $http, $cookieStore, $rootScope, $ionicPopover, $ionicPopup, $timeout, $state, $ionicSlideBoxDelegate) {
     // Form data for the login modal
     $scope.loginData = {};
     var server = 'http://192.168.1.111:8000';
@@ -449,93 +449,330 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
         isRuning:false
     }];
 
-    $scope.playerlists = [{
-        name: 'Reggae',
-        id: 1
-    }, {
-        name: 'Chill',
-        id: 2
-    }, {
-        name: 'Dubstep',
-        id: 3
-    }, {
-        name: 'Indie',
-        id: 4
-    }, {
-        name: 'Rap',
-        id: 5
-    }, {
-        name: 'Cowbell',
-        id: 6
-    }];
 
     $scope.playerlists = [{
-        row: [{
-            name: 'Reggae',
-            id: 1
+        pageID: 1,
+
+        rows: [{
+            row: [{
+                name: 'Reggae',
+                id: 1
+            }, {
+                name: 'Chill',
+                id: 2
+            }, {
+                name: 'Dubstep',
+                id: 3
+            }]
         }, {
-            name: 'Chill',
-            id: 2
+            row: [{
+                name: 'Indie',
+                id: 4
+            }, {
+                name: 'Rap',
+                id: 5
+            }, {
+                name: '1 Reggae',
+                id: 6
+            }]
         }, {
-            name: 'Dubstep',
-            id: 3
+            row: [{
+                name: 'Reggae',
+                id: 7
+            }, {
+                name: 'Chill',
+                id: 8
+            }, {
+                name: 'Dubstep',
+                id: 9
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 10
+            }, {
+                name: 'Chill',
+                id: 11
+            }, {
+                name: 'Dubstep',
+                id: 12
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 13
+            }, {
+                name: 'Chill',
+                id: 14
+            }, {
+                name: 'Dubstep',
+                id: 15
+            }]
         }]
     }, {
-        row: [{
-            name: 'Indie',
-            id: 4
+        pageID: 2,
+
+        rows: [{
+            row: [{
+                name: 'Reggae',
+                id: 21
+            }, {
+                name: 'Chill',
+                id: 22
+            }, {
+                name: 'Dubstep',
+                id: 23
+            }]
         }, {
-            name: 'Rap',
-            id: 5
+            row: [{
+                name: 'Indie',
+                id: 24
+            }, {
+                name: 'Rap',
+                id: 25
+            }, {
+                name: '1 Reggae',
+                id: 26
+            }]
         }, {
-            name: 'Cowbell',
-            id: 6
-        }]
-    },{
-        row: [{
-            name: 'Reggae',
-            id: 1
+            row: [{
+                name: 'Reggae',
+                id: 27
+            }, {
+                name: 'Chill',
+                id: 28
+            }, {
+                name: 'Dubstep',
+                id: 29
+            }]
         }, {
-            name: 'Chill',
-            id: 2
+            row: [{
+                name: 'Reggae',
+                id: 210
+            }, {
+                name: 'Chill',
+                id: 211
+            }, {
+                name: 'Dubstep',
+                id: 212
+            }]
         }, {
-            name: 'Dubstep',
-            id: 3
+            row: [{
+                name: 'Reggae',
+                id: 213
+            }, {
+                name: 'Chill',
+                id: 214
+            }, {
+                name: 'Dubstep',
+                id: 215
+            }]
         }]
     }, {
-        row: [{
-            name: 'Indie',
-            id: 4
+        pageID: 3,
+
+        rows: [{
+            row: [{
+                name: 'Reggae',
+                id: 31
+            }, {
+                name: 'Chill',
+                id: 32
+            }, {
+                name: 'Dubstep',
+                id: 33
+            }]
         }, {
-            name: 'Rap',
-            id: 5
+            row: [{
+                name: 'Indie',
+                id: 34
+            }, {
+                name: 'Rap',
+                id: 35
+            }, {
+                name: '1 Reggae',
+                id: 36
+            }]
         }, {
-            name: 'Cowbell',
-            id: 6
-        }]
-    },{
-        row: [{
-            name: 'Reggae',
-            id: 1
+            row: [{
+                name: 'Reggae',
+                id: 37
+            }, {
+                name: 'Chill',
+                id: 38
+            }, {
+                name: 'Dubstep',
+                id: 39
+            }]
         }, {
-            name: 'Chill',
-            id: 2
+            row: [{
+                name: 'Reggae',
+                id: 310
+            }, {
+                name: 'Chill',
+                id: 311
+            }, {
+                name: 'Dubstep',
+                id: 312
+            }]
         }, {
-            name: 'Dubstep',
-            id: 3
+            row: [{
+                name: 'Reggae',
+                id: 313
+            }, {
+                name: 'Chill',
+                id: 314
+            }, {
+                name: 'Dubstep',
+                id: 315
+            }]
         }]
     }, {
-        row: [{
-            name: 'Indie',
-            id: 4
+        pageID: 4,
+
+        rows: [{
+            row: [{
+                name: 'Reggae',
+                id: 41
+            }, {
+                name: 'Chill',
+                id: 42
+            }, {
+                name: 'Dubstep',
+                id: 43
+            }]
         }, {
-            name: 'Rap',
-            id: 5
+            row: [{
+                name: 'Indie',
+                id: 44
+            }, {
+                name: 'Rap',
+                id: 45
+            }, {
+                name: '1 Reggae',
+                id: 46
+            }]
         }, {
-            name: 'Cowbell',
-            id: 6
+            row: [{
+                name: 'Reggae',
+                id: 47
+            }, {
+                name: 'Chill',
+                id: 48
+            }, {
+                name: 'Dubstep',
+                id: 49
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 410
+            }, {
+                name: 'Chill',
+                id: 411
+            }, {
+                name: 'Dubstep',
+                id: 412
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 413
+            }, {
+                name: 'Chill',
+                id: 414
+            }, {
+                name: 'Dubstep',
+                id: 415
+            }]
         }]
-    }]  
+    }, {
+        pageID: 5,
+
+        rows: [{
+            row: [{
+                name: 'Reggae',
+                id: 51
+            }, {
+                name: 'Chill',
+                id: 52
+            }, {
+                name: 'Dubstep',
+                id: 53
+            }]
+        }, {
+            row: [{
+                name: 'Indie',
+                id: 54
+            }, {
+                name: 'Rap',
+                id: 55
+            }, {
+                name: '1 Reggae',
+                id: 56
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 57
+            }, {
+                name: 'Chill',
+                id: 58
+            }, {
+                name: 'Dubstep',
+                id: 59
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 510
+            }, {
+                name: 'Chill',
+                id: 511
+            }, {
+                name: 'Dubstep',
+                id: 512
+            }]
+        }, {
+            row: [{
+                name: 'Reggae',
+                id: 513
+            }, {
+                name: 'Chill',
+                id: 514
+            }]
+        }]
+    }];
+
+
+    $scope.previousDisabled = true;
+    $scope.nextDisabled = false;
+
+    $scope.previousSlide=function(){
+        $ionicSlideBoxDelegate.previous();
+        if ($ionicSlideBoxDelegate.currentIndex() == 0) {
+            $scope.previousDisabled = true;
+        } else if ($ionicSlideBoxDelegate.currentIndex() == $ionicSlideBoxDelegate.slidesCount()) {
+            $scope.nextDisabled = true;
+        } else {
+            $scope.previousDisabled = false;
+            $scope.nextDisabled = false;
+        }
+    }
+
+    $scope.nextSlide=function(){
+        $ionicSlideBoxDelegate.next();
+        
+        if ($ionicSlideBoxDelegate.currentIndex() == 0) {
+            $scope.previousDisabled = true;
+        } else if ($ionicSlideBoxDelegate.currentIndex() == $ionicSlideBoxDelegate.slidesCount()-1) {
+            $scope.nextDisabled = true;
+        } else {
+            $scope.previousDisabled = false;
+            $scope.nextDisabled = false;
+        }
+    }
+
 
 
 })
