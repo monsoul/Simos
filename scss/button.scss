@@ -1,0 +1,65 @@
+/*button*/
+.button{
+    &.button-circle {
+    @include button-style($button-light-bg, $button-light-border, $button-light-active-bg, $button-light-active-border, $button-light-text);
+    @include button-clear($button-light-border);
+    @include button-outline($button-light-border);
+    height:50px;
+    width: 50px;
+    max-width:50px;
+    max-height: 50px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    border: 2px solid #DE7422;
+    font-size: 30px;
+    opacity: 0.7;
+  }
+  &.button-circle:hover {
+    opacity: 1;
+  }
+  &.button-with-font {
+    @include button-style($button-light-bg, $button-light-border, $button-light-active-bg, $button-light-active-border, $button-light-text);
+    @include button-clear($button-light-border);
+    @include button-outline($button-light-border);
+    height:50px;
+    width: 50px;
+    max-width:50px;
+    max-height: 50px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    border: 2px solid #DE7422;
+    font-size: 14px;
+    padding: 0;
+    opacity: 0.7;
+  }
+  &.button-with-font:hover{
+    opacity: 1;
+  }
+}
+
+/*template*/
+/*with border*/
+.normal-border-pop,.alert-border-pop {
+    .popup {
+        background-color: black;
+        border: 2px solid #DE7422;
+        color: white;
+        .popup-buttons {
+            .button {
+                margin: 0 auto;
+            }
+        }
+    }
+    h1, h2, h3, h4, h5, h6, span, p {
+        color: white;
+    }
+}
+.normal-pop,.alert-pop{
+    .popup-buttons {
+        .button {
+            margin: 0 auto;
+        }
+    }
+}

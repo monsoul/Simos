@@ -52,6 +52,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCookies', 'Simos.s
                 }
             }
         })
+            .state('app.game', {
+                url: '/game',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/game.html'
+                    }
+                }
+            })
+            .state('app.oldCase', {
+                url: '/oldCase',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/oldCase.html'
+                    }
+                }
+            })
+            .state('app.overView', {
+                url: '/overView',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/overView.html'
+                    }
+                }
+            })
             .state('app.range', {
                 url: '/range',
                 views: {

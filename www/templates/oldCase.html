@@ -1,0 +1,12 @@
+<ion-view view-title="Game">
+    <div class="bar bar-subheader">
+        <h2 class="title">Load Old Case</h2>
+    </div>
+    <ion-content class="has-subheader">
+        <ul class="list">
+            <li class="item" ng-repeat='case in oldlists' ng-click='oldCaseUp(case)'>
+                CASE {{case.title}}
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

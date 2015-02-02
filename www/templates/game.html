@@ -1,0 +1,15 @@
+<ion-view view-title="Game">
+    <div class="bar bar-subheader">
+        <h2 class="title">Choose Your Training Case</h2>
+    </div>
+    <ion-content class="has-subheader">
+        <ul class="list">
+            <li class="item" ng-repeat='case in caselists' ng-click='newCaseUp(case)'>
+                CASE {{case.title}}
+            </li>
+            <li class="item"></li>
+            <li class="item">Resume List</li>
+            <a class="item" href="#/app/oldCase">Load Old Training Case</a>
+        </ul>
+    </ion-content>
+</ion-view>
