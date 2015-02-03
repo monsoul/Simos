@@ -497,17 +497,6 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
                 name: 'Dubstep',
                 id: 12
             }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 13
-            }, {
-                name: 'Chill',
-                id: 14
-            }, {
-                name: 'Dubstep',
-                id: 15
-            }]
         }]
     }, {
         pageID: 2,
@@ -555,17 +544,6 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
             }, {
                 name: 'Dubstep',
                 id: 212
-            }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 213
-            }, {
-                name: 'Chill',
-                id: 214
-            }, {
-                name: 'Dubstep',
-                id: 215
             }]
         }]
     }, {
@@ -615,17 +593,6 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
                 name: 'Dubstep',
                 id: 312
             }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 313
-            }, {
-                name: 'Chill',
-                id: 314
-            }, {
-                name: 'Dubstep',
-                id: 315
-            }]
         }]
     }, {
         pageID: 4,
@@ -674,17 +641,6 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
                 name: 'Dubstep',
                 id: 412
             }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 413
-            }, {
-                name: 'Chill',
-                id: 414
-            }, {
-                name: 'Dubstep',
-                id: 415
-            }]
         }]
     }, {
         pageID: 5,
@@ -704,42 +660,6 @@ angular.module('starter.controllers', ['Simos.directive', 'ionic'])
             row: [{
                 name: 'Indie',
                 id: 54
-            }, {
-                name: 'Rap',
-                id: 55
-            }, {
-                name: '1 Reggae',
-                id: 56
-            }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 57
-            }, {
-                name: 'Chill',
-                id: 58
-            }, {
-                name: 'Dubstep',
-                id: 59
-            }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 510
-            }, {
-                name: 'Chill',
-                id: 511
-            }, {
-                name: 'Dubstep',
-                id: 512
-            }]
-        }, {
-            row: [{
-                name: 'Reggae',
-                id: 513
-            }, {
-                name: 'Chill',
-                id: 514
             }]
         }]
     }];
